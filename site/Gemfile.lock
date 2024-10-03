@@ -51,6 +51,8 @@ GEM
     jekyll-bookshop (3.0.1)
       dry-inflector (>= 0.1, < 1.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-include-cache (0.2.1)
+      jekyll (>= 3.7, < 5.0)
     jekyll-local-assign (1.0.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-postcss-v2 (1.0.1)
@@ -88,6 +90,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll-bookshop (= 3.0.1)
+  jekyll-include-cache
   jekyll-local-assign
   jekyll-postcss-v2
   jekyll-sass-converter!
