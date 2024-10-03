@@ -6,4 +6,5 @@ group :jekyll_plugins do
   gem 'jekyll-sass-converter', :git => "https://github.com/CloudCannon/jekyll-sass-converter.git"
   gem 'jekyll-postcss-v2'
   gem 'jekyll-local-assign'
+  gem 'jekyll-include-cache'
 end
