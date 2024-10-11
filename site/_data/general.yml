@@ -3,7 +3,7 @@ website_title: Dante Jekyll Theme for Static Site Generators
 description: >-
   A starter template built with Jekyll and Bootsrap. This template is built with configurable components giving you control to customise your website.
 site_icon_image: /assets/images/logo/siteicon.png
-logo_image: /assets/images/logo/dante-logo.svg
+logo_image: /assets/images/logo/accf-logo.svg
 permalink: /:title/
 fonts:
   - font_style_url: >-

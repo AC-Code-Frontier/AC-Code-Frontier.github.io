@@ -1,6 +1,6 @@
 show_login_options: true
-login_url: "#"
-signup_url: "#"
+# login_url: "#"
+# signup_url: "#"
 menu:
   - title: Home
     url: /
