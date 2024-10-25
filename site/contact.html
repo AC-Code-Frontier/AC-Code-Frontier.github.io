@@ -37,19 +37,48 @@ content_blocks:
 ---
 
 
-<form method="POST" action="https://formspree.io/f/xyzyzqdo" style="max-width: 33%; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+<form method="POST" action="https://formspree.io/f/xyzyzqdo" 
+      style="max-width: 33%; width: 100%; margin: 0 auto; padding: 20px; 
+             border: 1px solid #ccc; border-radius: 5px; 
+             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+             margin-bottom: 20px;">
   <label for="full_name" style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name</label>
-  <input type="text" name="full_name" id="full_name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+  <input type="text" name="full_name" id="full_name" required 
+         style="width: 100%; padding: 10px; margin-bottom: 15px; 
+                border: 1px solid #ccc; border-radius: 4px;">
 
   <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email Address</label>
-  <input type="email" name="email" id="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+  <input type="email" name="email" id="email" required 
+         style="width: 100%; padding: 10px; margin-bottom: 15px; 
+                border: 1px solid #ccc; border-radius: 4px;">
 
   <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Message</label>
-  <textarea name="message" id="message" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; height: 100px;"></textarea>
+  <textarea name="message" id="message" required 
+            style="width: 100%; padding: 10px; margin-bottom: 15px; 
+                   border: 1px solid #ccc; border-radius: 4px; height: 100px;"></textarea>
 
   <input type="hidden" name="_gotcha" style="display: none;">
 
-  <input type="submit" value="Send Message" style="background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;">
+  <input type="submit" value="Send Message" 
+         style="background-color: #007bff; color: white; padding: 10px 15px; 
+                border: none; border-radius: 4px; cursor: pointer; 
+                transition: background-color 0.3s; width: 100%;">
 </form>
+
+<script>
+  // Responsive behavior for form
+  function adjustFormWidth() {
+    const form = document.querySelector('form');
+    if (window.innerWidth <= 768) {
+      form.style.maxWidth = '100%';
+    } else {
+      form.style.maxWidth = '33%';
+    }
+  }
+  
+  window.onload = adjustFormWidth;
+  window.onresize = adjustFormWidth;
+</script>
+
 
 
