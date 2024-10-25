@@ -37,7 +37,7 @@ column_settings:
   columns_for_mobile: '2'
 footer_info:
   footer_title:
-  # footer_logo_image: /assets/images/logo/siteicon.png
+  footer_logo_image: /assets/images/logo/accf-logo-wht.svg
   footer_content_html: >-
     Every small step brings you closer to greatness.
     Together, we grow, innovate, 
