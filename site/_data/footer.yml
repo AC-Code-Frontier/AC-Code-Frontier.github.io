@@ -4,16 +4,14 @@ footer_columns:
       - title: About us
         url: /about/
         icon_image:
-      - title: Features
-        url: '#'
-        icon_image:
       - title: News
         url: '#'
         icon_image:
-      - title: Careers
+      - title: Volunteer
         url: '#'
         icon_image:
-  - footer_column_title: Company
+
+  - footer_column_title: Club
     items:
       - title: Our team
         url: /team/
@@ -21,20 +19,12 @@ footer_columns:
       - title: Partner with us
         url: '#'
         icon_image:
-      - title: FAQ
-        url: '#'
-        icon_image:
       - title: Blog
         url: /blog/
         icon_image:
+        
   - footer_column_title: Support
     items:
-      - title: Account
-        url: '#'
-        icon_image:
-      - title: Support center
-        url: '#'
-        icon_image:
       - title: Feedback
         url: '#'
         icon_image:
@@ -47,10 +37,12 @@ column_settings:
   columns_for_mobile: '2'
 footer_info:
   footer_title:
-  footer_logo_image: /assets/images/logo/dante-wht-image.svg
+  # footer_logo_image: /assets/images/logo/siteicon.png
   footer_content_html: >-
-    Maecenas viverra malesuada erat sit ut commodo lacus amet, convallis.
-    Lobortis egestas parturient nunc
+    Every small step brings you closer to greatness.
+    Together, we grow, innovate, 
+    and conquer challenges.
+    
 social_media_information:
   copyright_social_icon: true
   youtube_url: '#'
@@ -58,4 +50,4 @@ social_media_information:
   instagram_username: '#'
 copyright_settings:
   copyright_content: true
-  copyright_text: Copyright © Dante 2021. All rights reserved.
+  copyright_text: Copyright © ACCF 2024. All rights reserved.
