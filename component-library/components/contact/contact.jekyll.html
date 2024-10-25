@@ -1,32 +1,23 @@
 {% if include.layout == "map_right" %}
-	{% assign contact_form_order = "order-md-1" %}
 	{% assign contact_map_order = "order-md-2" %}
 {% endif %}
 
 {% if include.layout == "map_left" %}
-	{% assign contact_form_order = "order-md-2" %}
 	{% assign contact_map_order = "order-md-1" %}
 {% endif %}
-
-{% assign contact_mobile_form_order = "order-2" %}
-{% assign contact_mobile_map_order = "order-1" %}
 
 {% assign c = "c-contact" %}
 
 <section class="{{c}}">
 	<div class="container">
-		<div class="row 
-					justify-content-between">
-			<div class="col-md-5 
-						{{ contact_map_order }} 
-						{{ contact_mobile_map_order }} 
-						{{c}}__location-popout">
+		<div class="row justify-content-between">
+			<div class="col-md-5 {{ contact_map_order }} {{c}}__location-popout">
 				<div class="{{c}}__location-popout-details">
 					<div class="row">
 						{% if include.address and include.address != "" %}
 							<div class="col-lg-6">
 								<div class="{{c}}__popout-heading">
-									<p>our location</p>
+									<p>Our Location</p>
 								</div>
 								<div class="{{c}}__popout-detail">
 									<p>{{ include.address }}</p>
@@ -36,17 +27,17 @@
 						{% if include.email and include.email != "" %}
 							<div class="col-lg-6">
 								<div class="{{c}}__popout-heading">
-									<p>email us</p>
+									<p>Email Us</p>
 								</div>
 								<div class="{{c}}__popout-detail">
-									<a href="mail:{{ include.email }}"><p>{{ include.email }}</p></a>
+									<a href="mailto:{{ include.email }}"><p>{{ include.email }}</p></a>
 								</div>
 							</div>
 						{% endif %}
 						{% if include.phone and include.phone != "" %}
 							<div class="col-lg-6">
 								<div class="{{c}}__popout-heading">
-									<p>give us a call</p>
+									<p>Give Us a Call</p>
 								</div>
 								<div class="{{c}}__popout-detail">
 									<a href="tel:{{ include.phone }}"><p>{{ include.phone }}</p></a>
@@ -56,67 +47,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 
-						{{ contact_form_order }} 
-						{{ contact_mobile_form_order }}">
-				<div class="{{c}}__contact-form">
-					<form action="javascript:void(0)">
-						<div class="form-group">
-							<div class="row">
-								<div class="col-sm-6">
-									<label for="contact_first_name">First name</label>
-									<input id="contact_first_name"
-											class="form-control {{c}}__contact-form-firstname" 
-											ype="text" 
-											name="contact_first_name"
-											required>
-								</div>
-								<div class="col-sm-6">
-									<label for="contact_last_name">Last name</label>
-									 <input id="contact_last_name"
-											class="form-control"
-											type="text" 
-											name="contact_last_name"
-											required>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="contact_email">Email address</label>
-							<input id="contact_email"
-									class="form-control" 
-									type="email" 
-									name="contact_email" 
-									aria-describedby="emailHelp" 
-									required>
-						</div>
-						<div class="form-group">
-							<label for="contact_textarea">Your message here</label>
-							<textarea id="contact_textarea"
-										class="form-control" 
-										name="contact_message" 
-										rows="8" 
-										col="5" 
-										required></textarea>
-						</div>
-						<button id="contact-submit" 
-								class="btn {{c}}__submit-button"
-								type="submit" >Send message</button>
-						<div class="{{c}}__success">
-							<p class="{{c}}__success-message"><i class="fas text-red fa-thumbs-up"></i> Thanks for reaching out, we’ll be contacting you soon!</p>
-						</div>
-					</form>
+
+			<div class="col-md-6">
+				<div class="text-center">
+					<div style="width: 100%; height: 600px; overflow: hidden;">
+						<iframe class="{{c}}__map-embed" 
+								frameborder="0" 
+								scrolling="no" 
+								marginheight="0" 
+								marginwidth="0" 
+								style="width: 100%; height: 100%;" 
+								{% if include.map-iframe %}src="{{ include.map-iframe }}"{% endif %}>
+						</iframe>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="{{c}}__map-wrapper">
-		<iframe class="{{c}}__map-embed {{ contact_map_order }}" 
-				frameborder="0" 
-				scrolling="no" 
-				marginheight="0" 
-				marginwidth="0" 
-				{% if include.map-iframe %}src="{{ include.map-iframe }}"{%endif%}>
-		</iframe>
 	</div>
 </section>
