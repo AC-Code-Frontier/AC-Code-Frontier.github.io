@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem 'sass-embedded', '~> 1.60'  # Add this line for compatibility
+
 group :jekyll_plugins do
   gem "jekyll-bookshop", "3.0.1"
   gem 'jekyll-watch', :git => "https://github.com/CloudCannon/jekyll-watch"
