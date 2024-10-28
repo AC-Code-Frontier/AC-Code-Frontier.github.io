@@ -1,5 +1,5 @@
 ---
-title:  Project 6
+title:  Project 6 AI/ML
 image: /assets/images/portfolio/construction.png
 header_image:
 author_staff_member: Wilson Kumbara
@@ -11,6 +11,8 @@ seo:
   twitter_handle: 
   open_graph_type:
   no_index: false
+
+portfolio-tag: ai-ml
 ---
 
 Updating soon....!

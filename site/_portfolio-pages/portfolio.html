@@ -20,8 +20,8 @@ content_blocks:
     caption_title:
     title: Portfolio
     description_html: >-
-      <p>Every project we build or participate has a different story.—a story of overcoming challenges and helping individuals grow.
-      &rsquo; </p>
+      <h2>Every project tells a story!
+      &rsquo; </h2>
     cta_button_label:
     cta_button_url:
     secondary_button_label:
@@ -30,41 +30,251 @@ content_blocks:
     space: 30
 ---
 {% assign l = "l-portfolio" %}
-
 <section class="{{l}}">
-	<div class="container">
-		<div class="{{l}}__tabs-wrapper">
+    <div class="container">
 
-			<div class="tab-content">
-				<div id="all" 
-					 class="tab-pane active">
-					<div class="row {{l}}__archive" 
-						 data-pagebreak="6">
-						{% for post in site.portfolio %}
-							<div class="col-md-4 mb-5 
-										portfolio-item">
-								<div class="{{l}}__portfolio-item">
-									{% if post.image %}
-										<a href="{{ post.url }}">
-											<div class="{{l}}__item-image-wrapper">
-												<div class="{{l}}__item-image" 
-													 style="background-image: url('{{ post.image }}');">
-												</div>
-											</div>
-										</a>
-									{% endif %}
-									<h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-									<p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
-								</div>
-							</div>
-						{% endfor %}
-					</div>
-					<div class="text-center">
-						<a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
-						<a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
-					</div>
-				</div>
-			</div>
+
+		<!-- Heading Section -->
+		<div class="text-center mb-4" style="padding: 20px; background-color: #e3f2fd; border-radius: 10px;">
+    		<h2 style="color: #6a5acd; font-size: 2.5em; margin-bottom: 10px;">Submit your project for a chance to win monthly recognition and gift cards!</h2>
+    		<p style="color: #333; font-size: 1.2em; line-height: 1.5; margin-bottom: 0;">We celebrate creativity and hard work, evaluating all submissions to award the best project. Let your skills shine!</p>
 		</div>
-	</div>
+	
+
+        <div class="{{l}}__tabs-wrapper">
+
+            <ul class="nav nav-tabs {{l}}__tabs">
+                <li><a class="btn active" data-toggle="tab" href="#all"><span>All</span></a></li>
+				<li><a class="btn" data-toggle="tab" href="#featured"><span>Featured</span></a></li>
+                <li><a class="btn" data-toggle="tab" href="#web-development"><span>Web Development</span></a></li>
+                <li><a class="btn" data-toggle="tab" href="#mobile-development"><span>Mobile Development</span></a></li>
+                <li><a class="btn" data-toggle="tab" href="#digital-product-design"><span>Digital Design</span></a></li>
+                <li><a class="btn" data-toggle="tab" href="#business-intelligence"><span>Business Intelligence</span></a></li>
+				<li><a class="btn" data-toggle="tab" href="#cloud-devops"><span>Cloud &amp; DevOps</span></a></li>
+                <li><a class="btn" data-toggle="tab" href="#ai-ml"><span>AI &amp; ML</span></a></li> <!-- New AI/ML tab -->
+				
+			</ul>
+
+            <div class="tab-content">
+
+                <!-- All Projects -->
+                <div id="all" class="tab-pane active">
+                    <div class="row {{l}}__archive" data-pagebreak="6">
+                        {% for post in site.portfolio %}
+                            <div class="col-md-4 mb-5 portfolio-item">
+                                <div class="{{l}}__portfolio-item">
+                                    {% if post.image %}
+                                        <a href="{{ post.url }}">
+                                            <div class="{{l}}__item-image-wrapper">
+                                                <div class="{{l}}__item-image" style="background-image: url('{{ post.image }}');"></div>
+                                            </div>
+                                        </a>
+                                    {% endif %}
+                                    <h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                    <p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="text-center">
+                        <a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+                        <a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+                    </div>
+                </div>
+
+                <!-- Featured Projects -->
+                <div id="featured" class="tab-pane">
+                    <div class="row {{l}}__archive">
+                        {% for post in site.portfolio %}
+                            {% if post.featured-tag == "featured" %}
+                                <div class="col-md-4 mb-5 portfolio-item">
+                                    <div class="{{l}}__portfolio-item">
+                                        {% if post.image %}
+                                            <a href="{{ post.url }}">
+                                                <div class="{{l}}__item-image-wrapper">
+                                                    <div class="{{l}}__item-image" style="background-image: url('{{ post.image }}');"></div>
+                                                </div>
+                                            </a>
+                                        {% endif %}
+                                        <h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+					<div class="text-center">
+                        <a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+                        <a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+                    </div>
+                </div>
+
+
+				<!-- Web Development Projects -->
+                <div id="web-development" class="tab-pane">
+                    <div class="row {{l}}__archive">
+                        {% for post in site.portfolio %}
+                            {% if post.portfolio-tag == "web-development" %}
+                                <div class="col-md-4 mb-5 portfolio-item">
+                                    <div class="{{l}}__portfolio-item">
+                                        {% if post.image %}
+                                            <a href="{{ post.url }}">
+                                                <div class="{{l}}__item-image-wrapper">
+                                                    <div class="{{l}}__item-image" style="background-image: url('{{ post.image }}');"></div>
+                                                </div>
+                                            </a>
+                                        {% endif %}
+                                        <h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+					<div class="text-center">
+                        <a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+                        <a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Development Projects -->
+                <div id="mobile-development" class="tab-pane fade">
+                    <div class="row {{l}}__archive">
+                        {% for post in site.portfolio %}
+                            {% if post.portfolio-tag == "mobile-development" %}
+                                <div class="col-md-4 mb-5 portfolio-item">
+                                    <div class="{{l}}__portfolio-item">
+                                        {% if post.image %}
+                                            <a href="{{ post.url }}">
+                                                <div class="{{l}}__item-image-wrapper">
+                                                    <div class="{{l}}__item-image" style="background-image: url('{{ post.image }}');"></div>
+                                                </div>
+                                            </a>
+                                        {% endif %}
+                                        <h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+					<div class="text-center">
+                        <a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+                        <a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+                    </div>
+                </div>
+
+                <!-- Digital Product Design Projects -->
+                <div id="digital-product-design" class="tab-pane fade">
+                    <div class="row {{l}}__archive">
+                        {% for post in site.portfolio %}
+                            {% if post.portfolio-tag == "digital-product-design" %}
+                                <div class="col-md-4 mb-5 portfolio-item">
+                                    <div class="{{l}}__portfolio-item">
+                                        {% if post.image %}
+                                            <a href="{{ post.url }}">
+                                                <div class="{{l}}__item-image-wrapper">
+                                                    <div class="{{l}}__item-image" style="background-image: url('{{ post.image }}');"></div>
+                                                </div>
+                                            </a>
+                                        {% endif %}
+                                        <h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+					<div class="text-center">
+                        <a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+                        <a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+                    </div>
+                </div>
+
+				<!-- Business Intelligence -->
+                <div id="business-intelligence" class="tab-pane fade">
+                    <div class="row {{l}}__archive">
+                        {% for post in site.portfolio %}
+                            {% if post.portfolio-tag == "business-intelligence" %}
+                                <div class="col-md-4 mb-5 portfolio-item">
+                                    <div class="{{l}}__portfolio-item">
+                                        {% if post.image %}
+                                            <a href="{{ post.url }}">
+                                                <div class="{{l}}__item-image-wrapper">
+                                                    <div class="{{l}}__item-image" style="background-image: url('{{ post.image }}');"></div>
+                                                </div>
+                                            </a>
+                                        {% endif %}
+                                        <h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+					<div class="text-center">
+                        <a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+                        <a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps Projects -->
+                <div id="cloud-devops" class="tab-pane fade">
+                    <div class="row {{l}}__archive">
+                        {% for post in site.portfolio %}
+                            {% if post.portfolio-tag == "cloud-devops" %}
+                                <div class="col-md-4 mb-5 portfolio-item">
+                                    <div class="{{l}}__portfolio-item">
+                                        {% if post.image %}
+                                            <a href="{{ post.url }}">
+                                                <div class="{{l}}__item-image-wrapper">
+                                                    <div class="{{l}}__item-image" style="background-image: url('{{ post.image }}');"></div>
+                                                </div>
+                                            </a>
+                                        {% endif %}
+                                        <h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+					<div class="text-center">
+                        <a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+                        <a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+                    </div>
+                </div>
+
+                <!-- AI & ML Projects -->
+                <div id="ai-ml" class="tab-pane fade">
+                    <div class="row {{l}}__archive">
+                        {% for post in site.portfolio %}
+                            {% if post.portfolio-tag == "ai-ml" %}
+                                <div class="col-md-4 mb-5 portfolio-item">
+                                    <div class="{{l}}__portfolio-item">
+                                        {% if post.image %}
+                                            <a href="{{ post.url }}">
+                                                <div class="{{l}}__item-image-wrapper">
+                                                    <div class="{{l}}__item-image" style="background-image: url('{{ post.image }}');"></div>
+                                                </div>
+                                            </a>
+                                        {% endif %}
+                                        <h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+					<div class="text-center">
+                        <a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+                        <a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 </section>
+

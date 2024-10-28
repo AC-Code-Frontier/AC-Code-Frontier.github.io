@@ -1,9 +1,9 @@
 ---
-title:  Project 5 - Cloud
+title:  Project 7 - cloud test 2
 image: /assets/images/portfolio/construction.png
 header_image:
-author_staff_member: Klara Kimberline
-permalink: /portfolio/project-5/
+author_staff_member: Wilson Kumbara
+permalink: /portfolio/project-6/
 seo:
   page_description:
   canonical_url: 
@@ -13,6 +13,8 @@ seo:
   no_index: false
 
 portfolio-tag: cloud-devops
+featured-tag: featured 
+                             # Add only if monthly winner
 ---
 
 Updating soon....!

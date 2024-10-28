@@ -1,0 +1,82 @@
+---
+title: Portfolio
+permalink: /portfolio/
+seo:
+  page_description: Dante Portfolio page
+  canonical_url: 
+  featured_image: 
+  twitter_handle: 
+  open_graph_type:
+  no_index: false
+content_blocks:
+  - _bookshop_name: hero-content-section
+    hero_layout: image_right
+    component_width: normal
+    mobile_image_order: Top
+    vertical_alignment: Bottom
+    image_type: contained
+    image: /assets/images/portfolio/folder.png
+    image_alt: Hero image
+    caption_title:
+    title: Portfolio
+    description_html: >-
+      <p>Every project we build or participate has a different story.—a story of overcoming challenges and helping individuals grow.
+      &rsquo; </p>
+    cta_button_label:
+    cta_button_url:
+    secondary_button_label:
+    secondary_button_url:
+  - _bookshop_name: spacer-section
+    space: 30
+---
+{% assign l = "l-portfolio" %}
+
+<section class="{{l}}">
+	<div class="container">
+		<div class="{{l}}__tabs-wrapper">
+
+			<section class="{{l}}">
+				<div class="container">
+					<div class="{{l}}__tabs-wrapper">
+			
+						<ul class="nav nav-tabs {{l}}__tabs">
+							<li><a class="btn active" data-toggle="tab" href="#all"><span>All</span></a></li>
+							<li><a class="btn" data-toggle="tab" href="#web-development"><span>Web Development</span></a></li>
+							<li><a class="btn" data-toggle="tab" href=""><span>Mobile Development</span></a></li>
+							<li><a class="btn" data-toggle="tab" href=""><span>Digital product design</span></a></li>
+							<li><a class="btn" data-toggle="tab" href=""><span>Cloud &amp; DevOps</span></a></li>
+						</ul>
+
+			<div class="tab-content">
+				<div id="all" 
+					 class="tab-pane active">
+					<div class="row {{l}}__archive" 
+						 data-pagebreak="6">
+						{% for post in site.portfolio %}
+							<div class="col-md-4 mb-5 
+										portfolio-item">
+								<div class="{{l}}__portfolio-item">
+									{% if post.image %}
+										<a href="{{ post.url }}">
+											<div class="{{l}}__item-image-wrapper">
+												<div class="{{l}}__item-image" 
+													 style="background-image: url('{{ post.image }}');">
+												</div>
+											</div>
+										</a>
+									{% endif %}
+									<h3 class="{{l}}__item-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+									<p class="{{l}}__item-description">{{ post.content | truncatewords: 10 }}</p>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="text-center">
+						<a class="btn button-standard" href="" data-pagebreak-control="prev">Previous</a>
+						<a class="btn button-standard" href="" data-pagebreak-control="next">Next</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

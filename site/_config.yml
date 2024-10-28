@@ -72,7 +72,9 @@ portfolio-tags:
 markdown: kramdown
 
 kramdown:
-  coderay_default_lang: html
+
+  coderay_default_lang: html # Default language for CodeRay syntax highlighting
+  
 
 # SASS Settings
 sass:
