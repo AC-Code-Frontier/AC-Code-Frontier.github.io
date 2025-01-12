@@ -21,7 +21,8 @@
       "preserveOutput": false,
       "environment_variables": [
         { "key": "JEKYLL_ENV", "value": "production" },
-        { "key": "BUNDLE_GEMFILE", "value": "site/Gemfile" }
+        { "key": "BUNDLE_GEMFILE", "value": "site/Gemfile" },
+        { "key": "RUBY_VERSION", "value": "3.2.2" } 
       ],
       "jekyll_environment": "production"
     }
