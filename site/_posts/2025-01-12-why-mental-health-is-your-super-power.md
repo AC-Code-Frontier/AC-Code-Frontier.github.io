@@ -3,7 +3,7 @@ title: Why Mental Health is your Super Power?
 post_category: Career
 trending: true
 featured: true
-image: /images/linkedin.jpg
+image: /images/mental-health.jpg
 author_staff_member: Sumit Pandey
 permalink: /blog/why_is_linkedin_important/
 date: 2025-1-12
