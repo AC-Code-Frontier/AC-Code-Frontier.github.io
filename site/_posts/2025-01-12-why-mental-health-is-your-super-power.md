@@ -206,7 +206,7 @@ Here’s your mission:
 <!-- <img src="/images/arda_sak.jpeg"> -->
 </span>
 <span>
-<b>Published by <i>Algonquin College Code Frontier</i>
+<b>Published by <i>Algonquin College Code Frontier(ACCF)</i>
 on Jan 12, 2025</b>
 </span>
 </div>
