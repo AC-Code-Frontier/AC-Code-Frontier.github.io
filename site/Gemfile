@@ -7,5 +7,4 @@ group :jekyll_plugins do
   gem 'jekyll-postcss-v2'
   gem 'jekyll-local-assign'
   gem 'jekyll-include-cache'
-  gem 'google-protobuf', '~> 3.24'
 end

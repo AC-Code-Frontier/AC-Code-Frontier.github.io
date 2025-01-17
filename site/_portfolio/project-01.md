@@ -1,8 +1,8 @@
 ---
-title:  Project 1 - Test Web Dev
+title:  Cup Game 
 image: /assets/images/portfolio/construction.png
 header_image: /assets/images/portfolio/construction.png
-author_staff_member: Dane Emerson
+author_staff_member: Nicholas Lorey
 permalink: /portfolio/project-1/
 
 seo:
@@ -13,7 +13,7 @@ seo:
   open_graph_type:
   no_index: false
 
-portfolio-tag: web-development 
+portfolio-tag: Game Dev
 
 ---
 
@@ -25,121 +25,170 @@ Updating soon....!
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Overview</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Light background color */
-            color: #333; /* Text color */
-            padding: 20px;
-            margin: 0;
-        }
+<style>
+/* General Layout */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-        h2, h3 {
-            color: #4CAF50; /* Green color for headings */
-        }
+.blog-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
-        p {
-            line-height: 1.6; /* Improve readability */
-        }
+h1.main-title {
+  font-size: 3em;
+  color: #2980b9;
+  text-align: center;
+  margin-top: 0;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse; /* Combine borders */
-            margin-top: 20px;
-            background-color: #fff; /* White background for table */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-        }
+h2.section-title {
+  font-size: 2em;
+  color: #e74c3c;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
 
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd; /* Light grey borders */
-        }
+h3.subsection-title {
+  font-size: 1.8em;
+  color: #16a085;
+  margin-top: 20px;
+}
 
-        th {
-            background-color: #4CAF50; /* Green background for header */
-            color: white; /* White text for header */
-        }
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 15px 0;
+}
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2; /* Light grey for even rows */
-        }
+strong {
+  font-weight: bold;
+  color: #f39c12;
+}
 
-        pre {
-            background-color: #f8f8f8; /* Light background for code */
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto; /* Allow horizontal scrolling */
-            margin: 20px 0; /* Space above and below code block */
-        }
+em {
+  font-style: italic;
+  color: #8e44ad;
+}
 
-        code {
-            color: #d63384; /* Color for code */
-            font-family: 'Courier New', Courier, monospace; /* Monospace font */
-        }
+/* Blockquote */
+blockquote.tip {
+  background-color: #f9f9f9;
+  border-left: 5px solid #2980b9;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #555;
+  margin: 20px 0;
+}
 
-        .portfolio-button {
-            display: inline-block;
-            background-color: #4CAF50; /* Button color */
-            color: white; /* Text color */
-            padding: 10px 20px; /* Button padding */
-            text-align: center;
-            text-decoration: none; /* Remove underline */
-            border-radius: 5px; /* Rounded corners */
-            margin-top: 20px; /* Space above the button */
-            transition: background-color 0.3s; /* Smooth transition */
-        }
+blockquote.tip strong {
+  font-size: 1.3em;
+}
 
-        .portfolio-button:hover {
-            background-color: #45a049; /* Darker green on hover */
-        }
-    </style>
+/* Image Section */
+.image-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.game-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+/* Lists */
+ul, ol {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+ul li, ol li {
+  margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+footer a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+</style>
 </head>
 <body>
 
-    <h2>Overview</h2>
-    <p>In this project, we developed a responsive web application aimed at improving user engagement for small businesses. The project involved various aspects of web development, including front-end design, back-end integration, and database management.</p>
+    <div class="blog-container">
 
-    <h2>Technologies Used</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Technology</th>
-                <th>Purpose</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>HTML</td>
-                <td>Structure web pages</td>
-            </tr>
-            <tr>
-                <td>CSS</td>
-                <td>Style web pages</td>
-            </tr>
-            <tr>
-                <td>JavaScript</td>
-                <td>Add interactivity</td>
-            </tr>
-            <tr>
-                <td>React</td>
-                <td>Build user interfaces</td>
-            </tr>
-            <tr>
-                <td>Node.js</td>
-                <td>Server-side logic</td>
-            </tr>
-        </tbody>
-    </table>
+  <h1 class="main-title">The Cup Game Challenge</h1>
+  <p class="intro-text">Welcome to the <em>Cup Game</em> challenge! It's a fun game where you guess which cup hides the object. Below, you can read how to play and see a cool design for the game!</p>
 
-    <h2>Sample Code Snippets</h2>
-    <h3>JavaScript Example</h3>
-    <pre><code class="language-javascript">function greetUser(name) {
-    return `Hello, ${name}! Welcome to our web application.`;
-}</code></pre>
+  <div class="section">
+    <h2 class="section-title">How to Play the Cup Game</h2>
+    <p>The objective is simple: <strong>watch carefully</strong> as the cups are shuffled around. One cup hides the prize, and you must guess which one it is.</p>
 
-    <h3>Go to Portfolio Section</h3>
-    <a class="portfolio-button" href="/portfolio">View Portfolio</a>
+    <h3 class="subsection-title">Basic Rules</h3>
+    <ol>
+      <li><strong>Shuffle the Cups:</strong> Three cups are placed upside down. One hides a ball, while the others are empty.</li>
+      <li><strong>Guess the Cup:</strong> After the shuffle, try to guess which cup holds the ball.</li>
+      <li><strong>Winner:</strong> If you guess correctly, you win!</li>
+    </ol>
+    <blockquote class="tip">
+      <strong>Pro Tip:</strong> Focus on the movement of the cups! You might have to use some strategy to spot the cup that moves the least.
+    </blockquote>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Game Design Overview</h2>
+    <p>The <strong>cups</strong> are styled with modern, minimalist aesthetics. Each cup has a shadow effect that gives it a 3D look.</p>
+
+    <div class="image-section">
+      <img src="assets/cup-game.jpg" alt="Cup Game Design" class="game-image">
+    </div>
+
+    <p><em>The image above showcases the final design layout with cups ready to be shuffled.</em></p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Game Features</h2>
+    <h3 class="subsection-title">Simple, Clean Layout</h3>
+    <ul>
+      <li><strong>Clear Instructions:</strong> Easy-to-read rules make learning the game simple.</li>
+      <li><strong>Modern Color Scheme:</strong> Subtle gradients and soft colors are used to enhance the user experience.</li>
+    </ul>
+
+    <h3 class="subsection-title">The Highlight Effect</h3>
+    <p>When a cup is selected, it gets highlighted to help players track it.</p>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Conclusion</h2>
+    <p>The <strong>Cup Game</strong> is a simple yet engaging challenge that tests both concentration and luck. Try it out and see if you can guess the right cup!</p>
+  </div>
+
+</div>
 
 </body>
 </html>
